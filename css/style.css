@@ -1,0 +1,201 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  color: #fff;
+}
+
+.sky {
+  position: relative;
+  height: 60vh;
+  background-color: royalblue;
+  -webkit-animation: sky 5s infinite linear;
+          animation: sky 5s infinite linear;
+}
+.sky .sun {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 100px yellow;
+          box-shadow: 0 0 100px yellow;
+  -webkit-animation: sun 5s infinite linear;
+          animation: sun 5s infinite linear;
+}
+
+.ground {
+  position: relative;
+  bottom: 0;
+  height: 40vh;
+  background-color: #333;
+}
+.ground .grass {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background-color: greenyellow;
+}
+.ground .road {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 100px;
+  background-color: #6f6f6f;
+}
+.ground .road .car {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 150px;
+  height: 70px;
+  background-color: red;
+  border-top-right-radius: 40px;
+  -webkit-animation: car 5s infinite linear;
+          animation: car 5s infinite linear;
+}
+.ground .road .car .wheel {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 50%;
+  border: 2px dashed rgb(225, 225, 225);
+  -webkit-animation: wheel 2s infinite linear;
+          animation: wheel 2s infinite linear;
+}
+.ground .road .car .back-wheel {
+  top: 40px;
+}
+.ground .road .car .front-wheel {
+  top: 40px;
+  right: 0px;
+}
+.ground .road .car .window {
+  position: absolute;
+  top: 10px;
+  width: 50px;
+  height: 25px;
+  background-color: rgb(84, 118, 220);
+}
+.ground .road .car .front-window {
+  left: 5px;
+}
+.ground .road .car .back-window {
+  right: 0px;
+  border-top-right-radius: 40px;
+}
+.ground .road .car::before,
+.ground .road .car::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 35px;
+  height: 35px;
+  background-color: red;
+}
+.ground .road .car::before {
+  left: -35px;
+  border-bottom-left-radius: 0%;
+}
+.ground .road .car::after {
+  right: -35px;
+  border-top-right-radius: 100%;
+}
+
+@-webkit-keyframes sky {
+  0% {
+    background-color: black;
+  }
+  50% {
+    background-color: royalblue;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+@keyframes sky {
+  0% {
+    background-color: black;
+  }
+  50% {
+    background-color: royalblue;
+  }
+  100% {
+    background-color: black;
+  }
+}
+@-webkit-keyframes sun {
+  0% {
+    top: 150%;
+    background-color: black;
+  }
+  50% {
+    top: 10%;
+    background-color: yellow;
+  }
+  100% {
+    top: 150%;
+    background-color: black;
+  }
+}
+@keyframes sun {
+  0% {
+    top: 150%;
+    background-color: black;
+  }
+  50% {
+    top: 10%;
+    background-color: yellow;
+  }
+  100% {
+    top: 150%;
+    background-color: black;
+  }
+}
+@-webkit-keyframes car {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 120%;
+  }
+}
+@keyframes car {
+  from {
+    left: -20%;
+  }
+  to {
+    left: 120%;
+  }
+}
+@-webkit-keyframes wheel {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(350deg);
+            transform: rotate(350deg);
+  }
+}
+@keyframes wheel {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(350deg);
+            transform: rotate(350deg);
+  }
+}/*# sourceMappingURL=style.css.map */
